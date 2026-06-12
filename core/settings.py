@@ -135,4 +135,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'parthibanseetharaman2003@gmail.com'        # ← your Gmail address
 EMAIL_HOST_PASSWORD = 'ttxe dgyg hqjv wxgg'  # ← your 16-char app password
 DEFAULT_FROM_EMAIL = 'parthibanseetharaman2003@gmail.com'     # ← same Gmail address
-NOTIFY_EMAIL = 'seetharaman.p.005@gmail.com'           # ← where to receive notifications
+NOTIFY_EMAIL = 'parthibanseetharaman2003@gmail.com'           # ← where to receive notifications
