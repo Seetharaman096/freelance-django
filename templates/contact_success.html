@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Sent — Seetharman P</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-logo">Seetharman P</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- SUCCESS CONTENT -->
+  <section class="success-section">
+    <div class="success-box">
+      <div class="success-icon">✅</div>
+      <h1>Message Sent!</h1>
+      <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+      <a href="/" class="btn-primary">Back to Home</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Seetharman P. All rights reserved.</p>
+    <p>Made with ❤️ for small businesses</p>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Creative Services</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <div class="nav-logo">Seetharman P</div>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>   
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-tag">Hello, I'm Seetharman P</p>
+            <h1>I Build Things<br>People<span class="highlight">Love</span></h1>
+            <p class="hero-sub">Freelance designer & developer helping small businesses groe with beautiful,
+                fast websites and creative solutions.
+            </p>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn-primary">See My Services</a>
+                <a href="contact.html" class="btn-secondary">Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section class="what-i-do">
+        <h2>What I Do</h2>
+        <p class="section-sub">Simple, honest services for small businesses</p>
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">~~</div>
+                <h3>UI Design</h3>
+                <p>Clean and modern designs that look great on every device.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Fast, responsive websites built from scratch with clean code.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>SEO BASICS</h3>
+                <p>Help your website show up on Google and get found by customers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE ME -->
+    <section class="why-me">
+        <h2>Why Work With Me?</h2>
+        <ul class="why-list">
+            <li>✅ Fast delivery — most projects done in 1–2 weeks</li>
+            <li>✅ Affordable pricing for small businesses</li>
+            <li>✅ Clean code — no bloated templates</li>
+            <li>✅ Free revisions until you're happy</li>
+            <li>✅ Direct communication — no middlemen</li>
+        </ul>
+    </section>
+
+    <script src="{% static 'js/static.js' %}"></script>
+
+</body>
+</html>

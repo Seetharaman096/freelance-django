@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Seetharman P</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-logo">Seetharman P</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>About <span class="highlight">Me</span></h1>
+    <p>The person behind the work</p>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="about-content">
+    <div class="about-grid">
+
+      <!-- LEFT — Photo placeholder -->
+      <div class="about-image">
+        <div class="image-placeholder">👤</div>
+      </div>
+
+      <!-- RIGHT — Story -->
+      <div class="about-text">
+        <h2>Hi, I'm Seetharman P 👋</h2>
+        <p>I'm a freelance designer and developer based in India. I help small businesses and startups build their online presence with clean, fast, and affordable websites.</p>
+        <p>I started freelancing after realizing that most small businesses were either paying too much for websites or getting low-quality work. My goal is simple — deliver professional quality at honest prices.</p>
+        <p>When I'm not building websites, I'm learning new tech, drinking too much coffee, and helping local businesses grow online.</p>
+        <a href="contact.html" class="btn-primary">Let's Work Together</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <p class="section-sub">Tools and technologies I work with</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <span class="skill-icon">🌐</span>
+        <span class="skill-name">HTML & CSS</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">⚡</span>
+        <span class="skill-name">JavaScript</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">🐍</span>
+        <span class="skill-name">Python & Django</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">🎨</span>
+        <span class="skill-name">UI Design</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">🗄️</span>
+        <span class="skill-name">SQL & Databases</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">📱</span>
+        <span class="skill-name">Responsive Design</span>
+        <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUN FACTS -->
+  <section class="fun-facts">
+    <div class="facts-grid">
+      <div class="fact-card">
+        <h3>20+</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="fact-card">
+        <h3>15+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="fact-card">
+        <h3>3+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="fact-card">
+        <h3>100%</h3>
+        <p>Client Satisfaction</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Seetharman P. All rights reserved.</p>
+    <p>Made with ❤️ for small businesses</p>
+  </footer>
+
+  <script src="{% static 'js/static.js' %}"></script>
+</body>
+</html>

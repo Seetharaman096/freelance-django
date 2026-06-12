@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Seetharman P</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-logo">Seetharman P</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>My <span class="highlight">Services</span></h1>
+    <p>What I can build for you</p>
+  </section>
+
+  <!-- SERVICES LIST -->
+  <section class="services-section">
+
+    <div class="service-item">
+      <div class="service-icon">🎨</div>
+      <div class="service-info">
+        <h3>UI / UX Design</h3>
+        <p>Clean, modern designs that look great on every screen. I design with your customers in mind — easy to use, easy to navigate, and beautiful to look at.</p>
+        <ul class="service-features">
+          <li>Website & mobile app design</li>
+          <li>Wireframes & prototypes</li>
+          <li>Logo & brand identity</li>
+          <li>Figma design files included</li>
+        </ul>
+        <span class="service-price">Starting at ₹5,000</span>
+      </div>
+    </div>
+
+    <div class="service-item reverse">
+      <div class="service-icon">💻</div>
+      <div class="service-info">
+        <h3>Web Development</h3>
+        <p>Fast, responsive websites built from scratch with clean code. No bloated templates — every line is written for your specific needs.</p>
+        <ul class="service-features">
+          <li>HTML, CSS & JavaScript</li>
+          <li>Mobile responsive design</li>
+          <li>Fast loading speed</li>
+          <li>SEO friendly structure</li>
+        </ul>
+        <span class="service-price">Starting at ₹8,000</span>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <div class="service-icon">🐍</div>
+      <div class="service-info">
+        <h3>Django Web Apps</h3>
+        <p>Full stack web applications with Python & Django. User login, database, admin panel — everything your business needs to run online.</p>
+        <ul class="service-features">
+          <li>User registration & login</li>
+          <li>Database design & management</li>
+          <li>Admin dashboard</li>
+          <li>API integration</li>
+        </ul>
+        <span class="service-price">Starting at ₹15,000</span>
+      </div>
+    </div>
+
+    <div class="service-item reverse">
+      <div class="service-icon">📈</div>
+      <div class="service-info">
+        <h3>SEO & Performance</h3>
+        <p>Help your website show up on Google and load faster. More visibility means more customers finding your business online.</p>
+        <ul class="service-features">
+          <li>On-page SEO optimization</li>
+          <li>Page speed improvement</li>
+          <li>Google Search Console setup</li>
+          <li>Monthly performance report</li>
+        </ul>
+        <span class="service-price">Starting at ₹3,000</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <h2>Not Sure Which Service You Need?</h2>
+    <p>Just reach out — I'll understand your business and suggest the best solution for your budget.</p>
+    <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Seetharman P. All rights reserved.</p>
+    <p>Made with ❤️ for small businesses</p>
+  </footer>
+
+  <script src="{% static 'js/static.js' %}"></script>
+</body>
+</html>

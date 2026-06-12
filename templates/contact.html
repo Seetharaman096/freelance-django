@@ -1,0 +1,157 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Seetharman P</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-logo">Seetharman P</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Get In <span class="highlight">Touch</span></h1>
+    <p>Let's talk about your project</p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+
+    <!-- LEFT — Contact Info -->
+    <div class="contact-info">
+      <h2>Let's Work Together</h2>
+      <p>Have a project in mind? Fill the form and I'll get back to you within 24 hours.</p>
+
+      <div class="info-items">
+
+        <div class="info-item">
+          <span class="info-icon">📧</span>
+          <div>
+            <h4>Email</h4>
+            <p>seetharman@email.com</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">📱</span>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <p>+91 98765 43210</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <h4>Location</h4>
+            <p>India (Available Remote)</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">⏰</span>
+          <div>
+            <h4>Response Time</h4>
+            <p>Within 24 hours</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT — Contact Form -->
+    <div class="contact-form">
+      <form id="contactForm" method="POST">
+
+        {% csrf_token %}
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="id_name">Your Name</label>
+            {{ form.name }}
+          </div>
+
+          <div class="form-group">
+            <label for="id_email">Your Email</label>
+            {{ form.email }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="id_service">Service Needed</label>
+          {{ form.service }}
+        </div>
+
+        <!-- Hidden field — shows only when Other is selected -->
+        <div class="form-group" id="otherServiceGroup" style="display:none;">
+          <label for="otherService">Please describe your service</label>
+          <input type="text" id="otherService" name="other_service" 
+          placeholder="Tell me what you need...">
+        </div>
+
+        <!-- Inline script to make sure it works -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const sel = document.getElementById('service');
+            const grp = document.getElementById('otherServiceGroup');
+            if (sel && grp) {
+              sel.addEventListener('change', function() {
+                grp.style.display = this.value === 'other' ? 'block' : 'none';
+              });
+              // Check on page load too
+              if (sel.value === 'other') grp.style.display = 'block';
+            }
+          });
+        </script>
+
+        <div class="form-group">
+          <label for="id_budget">Your Budget</label>
+          {{ form.budget }}
+        </div>
+
+        <div class="form-group">
+          <label for="id_message">Your Message</label>
+          {{ form.message }}
+        </div>
+
+        <button type="submit" class="btn-primary submit-btn">
+          Send Message 🚀
+        </button>
+
+        <!-- Success message (hidden by default) -->
+        <!--<div class="form-success" id="formSuccess">
+          ✅ Message sent! I'll get back to you within 24 hours.
+        </div> -->
+
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Seetharman P. All rights reserved.</p>
+    <p>Made with ❤️ for small businesses</p>
+  </footer>
+
+  <script src="{% static 'js/static.js' %}"></script>
+</body>
+</html>
