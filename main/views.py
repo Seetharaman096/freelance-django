@@ -1,9 +1,21 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
-from django.conf import settings    
+from django.conf import settings
 from .forms import ContactForm
+import threading
 
-# Create your views here.
+def send_email_async(subject, message, from_email, recipient_list):
+    try:
+        send_mail(
+            subject=subject,
+            message=message,
+            from_email=from_email,
+            recipient_list=recipient_list,
+            fail_silently=True,
+        )
+    except Exception:
+        pass
+
 def home(request):
     return render(request, 'index.html')
 
@@ -11,7 +23,7 @@ def about(request):
     return render(request, 'about.html')
 
 def services(request):
-    return render(request,'services.html')
+    return render(request, 'services.html')
 
 def contact(request):
     form = ContactForm()
@@ -19,15 +31,15 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            # Save to database
             contact_msg = form.save()
 
-            # Send email notification
-            try:
-                send_mail(
-                    subject=f'New Contact from {contact_msg.name}',
-                    message=f'''
-You have a new contact form submission!
+            # Send email in background thread — won't block the response
+            email_thread = threading.Thread(
+                target=send_email_async,
+                args=(
+                    f'New Contact from {contact_msg.name}',
+                    f'''
+New contact form submission!
 
 Name:    {contact_msg.name}
 Email:   {contact_msg.email}
@@ -38,19 +50,18 @@ Budget:  {contact_msg.budget}
 Message:
 {contact_msg.message}
 
----
-Reply directly to: {contact_msg.email}
+Reply to: {contact_msg.email}
                     ''',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[settings.NOTIFY_EMAIL],
-                    fail_silently=True,
+                    settings.DEFAULT_FROM_EMAIL,
+                    [settings.NOTIFY_EMAIL],
                 )
-            except Exception as e:
-                print(f"Email error: {e}")
+            )
+            email_thread.daemon = True
+            email_thread.start()
 
             return redirect('contact_success')
 
-    return render(request,'contact.html', {'form':form})
+    return render(request, 'contact.html', {'form': form})
 
 def contact_success(request):
     return render(request, 'contact_success.html')
